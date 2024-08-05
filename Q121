@@ -1,0 +1,14 @@
+	public int maxProfit(int[] prices) {
+		int max = 0;
+		int initial = prices[0];
+
+		for (int i = 1; i < prices.length; i++) {
+			if (prices[i] < initial) {
+				initial = prices[i];
+			}
+			max = Math.max(max, prices[i] - initial);
+
+		}
+
+		return max;
+	}
